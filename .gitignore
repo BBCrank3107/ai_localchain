@@ -1,0 +1,27 @@
+# ==============================================================================
+# LocalChain AI Monorepo - Root .gitignore
+# ==============================================================================
+
+# Exclude non-AI workspaces in the local-chain-app parent directory
+/app_localchain/
+/server-localchain/
+/localchain_web/
+/documents/
+/.vscode/
+
+# Workspace documentation for other parts of LocalChain
+/HE_THONG_LOCALCHAIN_LUONG_HOAT_DONG_CHI_TIET.md
+/PROJECT_DESCRIPTION.md
+/PROJECT_REPORT.md
+
+# OS and system files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local

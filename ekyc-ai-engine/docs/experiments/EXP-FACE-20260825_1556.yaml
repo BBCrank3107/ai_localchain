@@ -1,0 +1,21 @@
+experiment_id: EXP-FACE-20260825_1556
+model:
+  architecture: MobileFaceNet
+  embedding_dim: 128
+  pretrained: false
+  initialization: random
+dataset:
+  name: V-FACE-Subset
+  version: '1.0'
+  train_identities: 10000
+  val_identities: 1000
+training:
+  seed: 42
+  optimizer: AdamW
+  lr: 0.001
+  batch_size: 256
+  epochs: 100
+  loss: ArcFace (Angular Margin Softmax)
+metrics:
+  best_val_accuracy: 0.8000
+  EER: 0.045

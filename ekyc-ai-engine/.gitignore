@@ -1,0 +1,51 @@
+# ==============================================================================
+# eKYC AI Engine - .gitignore
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python virtual environment
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Datasets (Contains real/synthetic CCCD photos & heavy binary datasets ~312MB)
+datasets/
+test/images/cccd/*.jpg
+test/images/cccd/*.png
+test/images/face/*.jpg
+test/images/face/*.png
+
+# Intermediate training runs & checkouts
+# Keep only the trained weights best.pt, config, and performance metrics
+runs/*
+!runs/detect/
+!runs/detect/train/
+runs/detect/train/*.jpg
+runs/detect/train/weights/last.pt
+!runs/detect/train/weights/
+!runs/detect/train/weights/best.pt
+!runs/detect/train/args.yaml
+!runs/detect/train/results.csv
+!runs/detect/train/*.png
+
+# Temporary and runtime files
+temp/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Secrets & Environment variables
+.env
+.env.local
+.env.*.local
+*.pem
+*.key

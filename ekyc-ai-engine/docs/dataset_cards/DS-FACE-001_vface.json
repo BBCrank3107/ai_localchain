@@ -1,0 +1,27 @@
+{
+  "dataset_id": "DS-FACE-001",
+  "name": "V-FACE (Vietnamese Face Dataset)",
+  "task": "Face Detection & Face Recognition",
+  "provenance": {
+    "source_url": "Academic Paper: Duong et al., 2022 (V-FACE)",
+    "creator": "Academic Researchers (Vietnam)",
+    "collection_method": "Internet scraping & crowdsourced",
+    "license": "Academic Research Only"
+  },
+  "statistics": {
+    "total_images": 3000000,
+    "identities": 300,
+    "classes": ["face_identity"]
+  },
+  "acceptance_criteria": {
+    "source_verified": true,
+    "license_verified": true,
+    "commercial_use": false,
+    "privacy_compliance": false,
+    "annotation_quality": true
+  },
+  "privacy_note": "Contains real faces without explicit consent for commercial use. License strictly limits usage to Academic Research.",
+  "status": "APPROVED FOR RESEARCH ONLY (Cannot be deployed in Commercial Production without obtaining commercial license or consent)",
+  "version": "1.0",
+  "checksum_sha256": "N/A"
+}

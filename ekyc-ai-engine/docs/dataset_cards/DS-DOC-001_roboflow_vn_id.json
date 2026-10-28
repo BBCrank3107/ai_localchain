@@ -1,0 +1,27 @@
+{
+  "dataset_id": "DS-DOC-001",
+  "name": "Roboflow Vietnamese ID Card Dataset",
+  "task": "Document Detection & Perspective Correction",
+  "provenance": {
+    "source_url": "https://universe.roboflow.com/.../vietnamese-id-card",
+    "creator": "Roboflow Universe Community",
+    "collection_method": "Internet scraping & crowdsourced upload",
+    "license": "CC BY 4.0 (Commercial allowed with attribution)"
+  },
+  "statistics": {
+    "total_images": 1740,
+    "identities": "Unknown",
+    "classes": ["id_card", "face", "qr_code", "text_fields"]
+  },
+  "acceptance_criteria": {
+    "source_verified": true,
+    "license_verified": true,
+    "commercial_use": true,
+    "privacy_compliance": false,
+    "annotation_quality": true
+  },
+  "privacy_note": "WARNING: Dataset contains real names and unblurred faces of Vietnamese citizens collected randomly from the internet. Violates PDPL if used without consent.",
+  "status": "REJECTED (Must be heavily blurred/scrubbed before use or replaced by Synthetic Data)",
+  "version": "1.0",
+  "checksum_sha256": "N/A"
+}

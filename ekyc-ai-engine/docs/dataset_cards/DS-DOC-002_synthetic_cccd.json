@@ -1,0 +1,27 @@
+{
+  "dataset_id": "DS-DOC-002",
+  "name": "Synthetic CCCD Dataset V1",
+  "task": "Document Detection & OCR",
+  "provenance": {
+    "source_url": "N/A (Self-generated)",
+    "creator": "Internal eKYC Team",
+    "collection_method": "Synthetic generation via OpenCV & Python using blank CCCD templates and random fake texts",
+    "license": "Proprietary"
+  },
+  "statistics": {
+    "total_images": 50000,
+    "identities": "50,000 Fake Names",
+    "classes": ["id_card", "text_fields", "qr_code"]
+  },
+  "acceptance_criteria": {
+    "source_verified": true,
+    "license_verified": true,
+    "commercial_use": true,
+    "privacy_compliance": true,
+    "annotation_quality": true
+  },
+  "privacy_note": "100% synthetic data. No real identities. Fully compliant with PDPL.",
+  "status": "APPROVED (Used for Train/Val. NOT for Test Set)",
+  "version": "1.0",
+  "checksum_sha256": "pending_generation"
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_id": "DS-LIVENESS-001",
+  "name": "CASIA-FASD (Face Anti-Spoofing Database)",
+  "task": "Temporal Liveness & Anti-Spoofing",
+  "provenance": {
+    "source_url": "http://www.cbsr.ia.ac.cn/english/FaceAntiSpoof%20Databases.asp",
+    "creator": "Chinese Academy of Sciences (CASIA)",
+    "collection_method": "Volunteered recording (genuine & spoof attacks)",
+    "license": "Academic Research Only"
+  },
+  "statistics": {
+    "total_videos": 600,
+    "identities": 50,
+    "classes": ["genuine", "warped_photo_attack", "cut_photo_attack", "video_replay_attack"]
+  },
+  "acceptance_criteria": {
+    "source_verified": true,
+    "license_verified": true,
+    "commercial_use": false,
+    "privacy_compliance": true,
+    "annotation_quality": true
+  },
+  "privacy_note": "Identities are volunteers. However, license is strictly for non-commercial research.",
+  "status": "APPROVED FOR RESEARCH ONLY",
+  "version": "1.0",
+  "checksum_sha256": "N/A"
+}

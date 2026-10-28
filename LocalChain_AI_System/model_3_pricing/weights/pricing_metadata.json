@@ -1,0 +1,41 @@
+{
+  "pricing_schema_version": "3.1",
+  "pricing_dataset_version": "3.1",
+  "pricing_model_version": "3.1",
+  "rule_engine_version": "1.0",
+  "component_model": {
+    "algorithm": "XGBoost Regressor",
+    "features": [
+      "component_id",
+      "brand",
+      "brand_tier",
+      "part_type",
+      "availability",
+      "component_condition",
+      "action_type",
+      "baseline_price_vnd",
+      "market_age_days"
+    ],
+    "train_samples": 411300,
+    "mae_cv_vnd": 10021.68017578125,
+    "r2_cv": 0.9785089731216431
+  },
+  "labor_model": {
+    "algorithm": "XGBoost Regressor",
+    "features": [
+      "device_id",
+      "region_class",
+      "action_type",
+      "base_labor_vnd",
+      "difficulty_score",
+      "estimated_minutes",
+      "tools_count",
+      "requires_professional",
+      "disassembly_level",
+      "waterproof_level"
+    ],
+    "train_samples": 47100,
+    "mae_cv_vnd": 8313.29921875,
+    "r2_cv": 0.961088216304779
+  }
+}

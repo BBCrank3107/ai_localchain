@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalChain AI Multimodal Tester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="app-header">
+            <h1 class="logo">LocalChain <span class="accent">AI</span></h1>
+            <p class="subtitle">Multimodal Diagnostics Engine V5.2</p>
+        </header>
+
+        <section class="panel input-panel glassmorphism">
+            <form id="diagnoseForm">
+                <div class="form-group image-upload">
+                    <label for="imageInput" class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </div>
+                        <span class="upload-text">Nhấp để tải lên hoặc Kéo thả ảnh thiết bị</span>
+                        <input type="file" id="imageInput" name="image" accept="image/*" required>
+                        <img id="imagePreview" class="hidden" alt="Preview">
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="complaintInput">Triệu chứng & Tình trạng</label>
+                        <textarea id="complaintInput" name="complaint" rows="3" placeholder="Mô tả sự cố bạn đang gặp phải..." required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="brandInput">Hãng sản xuất</label>
+                        <input type="text" id="brandInput" name="brand" placeholder="Ví dụ: Panasonic, LG, Dell (Tùy chọn)">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="regionSelect">Khu vực</label>
+                        <select id="regionSelect" name="region">
+                            <option value="Metro" selected>Nội thành (Metro)</option>
+                            <option value="Urban">Ngoại ô (Urban)</option>
+                            <option value="Province">Tỉnh (Province)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary" id="submitBtn">
+                    <span class="btn-text">Chẩn đoán sự cố</span>
+                    <div class="loader-spinner hidden" id="btnLoader"></div>
+                </button>
+            </form>
+        </section>
+
+        <!-- Result Section -->
+        <section id="resultSection" class="result-section hidden">
+            <!-- NGL Message -->
+            <div class="panel glassmorphism highlight-card">
+                <div class="card-header">
+                    <h3>💡 Giải trình tự nhiên (NLG)</h3>
+                </div>
+                <p id="naturalMessage" class="nlg-text"></p>
+            </div>
+
+            <div class="result-grid">
+                <!-- Diagnosis -->
+                <div class="panel glassmorphism">
+                    <div class="card-header">
+                        <h3>🛠️ Chẩn đoán sơ cấp</h3>
+                    </div>
+                    <ul class="detail-list">
+                        <li><strong>Thiết bị (Model 1):</strong> <span id="resDevice"></span></li>
+                        <li><strong>Mã lỗi:</strong> <span id="resFaultCode" class="tag"></span></li>
+                        <li><strong>Hư hỏng:</strong> <span id="resFaultName"></span></li>
+                        <li><strong>Linh kiện chính:</strong> <span id="resComponents"></span></li>
+                        <li><strong>Độ tin cậy:</strong> <span id="resConfidence"></span></li>
+                    </ul>
+                </div>
+
+                <!-- Pricing -->
+                <div class="panel glassmorphism">
+                    <div class="card-header">
+                        <h3>💰 Dự toán chi phí</h3>
+                    </div>
+                    <ul class="detail-list">
+                        <li><strong>Tổng chi phí:</strong> <span id="resTotalPrice" class="price-text"></span></li>
+                        <li><strong>Chiết khấu:</strong> <span id="resDiscount"></span></li>
+                        <li><strong>Bảo hành:</strong> <span id="resWarranty"></span></li>
+                    </ul>
+                    <div class="itemized-prices" id="itemizedPrices">
+                        <!-- Injected JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflow RAG -->
+            <div class="panel glassmorphism workflow-card">
+                <div class="card-header">
+                    <h3>📋 Quy trình kỹ thuật V5.2 (State Machine DAG)</h3>
+                    <span id="workflowRisk" class="badge"></span>
+                </div>
+                <div id="workflowStates" class="timeline">
+                    <!-- Injected JS -->
+                </div>
+            </div>
+            
+            <div class="panel glassmorphism workflow-card">
+                <div class="card-header">
+                    <h3>📖 Cẩm nang Markdown (Repair Guide)</h3>
+                </div>
+                <div id="repairGuide" class="markdown-preview">
+                    <!-- Injected JS -->
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <script src="localization.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

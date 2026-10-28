@@ -1,0 +1,26 @@
+# =====================================================================
+# EKYC AI ENGINE - REQUIREMENTS
+# Phiên bản Python khuyến nghị: Python 3.11.x (ví dụ: Python 3.11.9)
+#
+# Các bước tạo lại venv và cài đặt trên Windows mới:
+#   cd d:\Application\local-chain-app\ekyc-ai-engine
+#   python -m venv venv
+#   .\venv\Scripts\Activate.ps1
+#   python -m pip install --upgrade pip
+#   pip install -r requirements.txt
+# =====================================================================
+
+fastapi==0.111.0
+uvicorn==0.30.1
+gradio>=4.36.1
+torch>=2.2.0
+torchvision>=0.17.0
+ultralytics>=8.3.0
+vietocr==0.3.13
+deepface==0.0.91
+opencv-python==4.10.0.84
+pydantic>=2.7.4
+python-multipart>=0.0.9
+tensorflow==2.21.0
+tf_keras==2.21.0
+setuptools<70

@@ -1,0 +1,42 @@
+# ==============================================================================
+# LocalChain AI System - .gitignore
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python virtual environment (8.9 GB)
+localchain_env/
+venv/
+env/
+.venv/
+ENV/
+
+# Large Datasets & Raw Harvested Sources (4.4 GB)
+datasets/
+crawlers/data/
+crawlers/downloads/
+
+# Ephemeral training runs, logs, and scratch work
+# Note: Keep production weights in weights/ and weights_transformer_multihead/
+runs/
+model_1_vision/runs/
+logs/
+scratch/
+google_out.html
+
+# Temporary and runtime files
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Secrets & Environment variables
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
